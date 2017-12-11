@@ -229,7 +229,6 @@
         UILabel *label = [[UILabel alloc] init] ;
         label.backgroundColor = [UIColor clearColor];
         label.font = [UIFont systemFontOfSize:_fontSize];
-        label.textColor = _fontColor;
         label.text = labelString;
         label.tag = labelTag;
         CGSize detailSize = [labelString sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:_fontSize]}];
@@ -296,7 +295,7 @@
         graduationLabel.adjustsFontSizeToFitWidth = YES;
         graduationLabel.tag = labelTag;
         graduationLabel.font = [UIFont systemFontOfSize:ceil(_lengthUnit)];
-        graduationLabel.textColor = _graduationColor;
+        graduationLabel.textColor = [UIColor orangeColor];
         graduationLabel.text = [NSString stringWithFormat:@"%.0f",_valueDivider*section];
         [self addSubview:graduationLabel];
         if (_isShowGraduation) {
